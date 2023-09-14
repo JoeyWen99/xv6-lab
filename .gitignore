@@ -14,6 +14,8 @@ kernelmemfs
 mkfs
 kernel/kernel
 user/usys.S
+user/user
+user/kernel
 .gdbinit
 myapi.key
 *-handin.tar.gz
