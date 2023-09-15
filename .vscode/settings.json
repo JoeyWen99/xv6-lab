@@ -1,7 +1,16 @@
 {
   "files.associations": {
     "user.h": "c",
-    "types.h": "c"
+    "types.h": "c",
+    "__hash_table": "c",
+    "cstring": "c",
+    "locale": "c",
+    "string": "c",
+    "vector": "c",
+    "fs.h": "c",
+    "stat.h": "c",
+    "__config": "c",
+    "istream": "c"
   },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "clang",

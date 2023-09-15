@@ -1,18 +1,25 @@
-// xv6-riscv/.vscode/launch.json
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "xv6debug",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/kernel/kernel",
-            "stopAtEntry": true,
-            "cwd": "${workspaceFolder}",
-            "miDebuggerServerAddress": "127.0.0.1:25501", //见.gdbinit 中 target remote xxxx:xx
-            "miDebuggerPath": "/opt/riscv-gnu-toolchain/bin/riscv64-unknown-elf-gdb", // which gdb-multiarch
-            "MIMode": "gdb",
-            "preLaunchTask": "xv6build"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "xv6debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/kernel/kernel",
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "miDebuggerServerAddress": "127.0.0.1:25501",
+      "miDebuggerPath": "/opt/riscv-gnu-toolchain/bin/riscv64-unknown-elf-gdb",
+      "MIMode": "gdb",
+      "preLaunchTask": "xv6build"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/wenjiayi/Desktop/6.S081/xv6-labs-2021",
+      "program": "/Users/wenjiayi/Desktop/6.S081/xv6-labs-2021/build/Debug/outDebug"
+    }
+  ]
 }

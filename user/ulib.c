@@ -8,9 +8,9 @@ strcpy(char* s, const char* t)
 {
   char* os;
 
-  os = s;
-  while ((*s++ = *t++) != 0)
-    ;
+  os = s;//保存s的首地址
+  while ((*s++ = *t++) != 0);
+
   return os;
 }
 
@@ -27,11 +27,19 @@ strlen(const char* s)
 {
   int n;
 
-  for (n = 0; s[n]; n++)
-    ;
+  for (n = 0; s[n]; n++);
+
   return n;
 }
 
+/*
+ * Sets the first n bytes of the block of memory pointed by dst to the specified value c.
+ *
+ * @param dst Pointer to the block of memory to fill.
+ * @param c Value to be set. The value is passed as an int, but the function fills the block of memory using the unsigned char conversion of this value.
+ * @param n Number of bytes to be set to the value.
+ * @return Pointer to the memory block pointed by dst.
+ */
 void*
 memset(void* dst, int c, uint n)
 {
@@ -95,6 +103,18 @@ atoi(const char* s)
   return n;
 }
 
+/*
+ * memmove - copy n bytes from src to dst, handling overlap
+ * @vdst: pointer to destination buffer
+ * @vsrc: pointer to source buffer
+ * @n: number of bytes to copy
+ *
+ * This function copies n bytes from the source buffer to the destination buffer.
+ * If the source and destination buffers overlap, the function handles the overlap
+ * correctly by copying the bytes in reverse order to avoid overwriting data.
+ *
+ * Returns a pointer to the destination buffer.
+ */
 void*
 memmove(void* vdst, const void* vsrc, int n)
 {
